@@ -20,7 +20,8 @@
     <body>
     <div id="wrapper">
     <header id="header">
-    <span class="logo"><a style="border-bottom: none; width: 50%;"  href="/"><img src="assets/images/logo.png" alt="" /></a></span>
+        <h1 style="font-weight:bolder">Nadeen Studio Ltd.</h1>
+    <!-- <span class="logo"><a style="border-bottom: none; width: 50%;"  href="/"><img src="assets/images/logo.png" alt="" /></a></span> -->
     <p>Dance App Magic Tiles</p>
     </header>
 
@@ -38,14 +39,53 @@
 
     <!-- CBN -->
     <section id="cbn" class="main special">
-    <header class="major"><h2>Games</h2></header>
+    <header style="font-weight: bold;" class="major"><h2>Games</h2></header>
 
         <div class="spotlight">
             <div class="content">
-            <header><h2>Fairy</h2></header>
-            <p>Beautiful fairies will show you their amazing world. It's full of fragrant flowers, berries and fresh summer air. The land of fairies is populated by charming inhabitants. They look like elegant butterflies fluttering around.</p>
+                <header><h2>Kawaii Dancing - Piano Tiles Hop</h2></header>
+                <p>"Get ready to groove to the cutest beats in 'Kawaii Dancing - Piano Tiles Hop'! Jump into a world of adorable rhythms and tap your way to the top. Can you keep up with the dance floor? Play now and dance to your own rhythm!"</p>
             </div>
-            <span class="image"><img src="assets/images/fairy.jpeg" alt="" /></span>
+            <span class="image"><img src="assets/images/piano1.png" alt="" /></span>
+
+        </div>
+
+        <div class="scroll-container">
+            <div class="image-scroll">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <!-- <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1"> -->
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="spotlight">
+            <div class="content">
+                <header><h2>Kawaii Dancing - Piano Tiles Hop</h2></header>
+                <p>"Get ready to groove to the cutest beats in 'Kawaii Dancing - Piano Tiles Hop'! Jump into a world of adorable rhythms and tap your way to the top. Can you keep up with the dance floor? Play now and dance to your own rhythm!"</p>
+            </div>
+            <span class="image"><img src="assets/images/piano1.png" alt="" /></span>
+
+        </div>
+
+        <div class="scroll-container">
+            <div class="image-scroll">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <!-- <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1">
+                <img src="assets/images/assets.png" alt="Image 1"> -->
+                <!-- Add more images as needed -->
+            </div>
         </div>
 
 
@@ -237,6 +277,36 @@
     
     ga('create', 'UA-87724945-1', 'auto');
     ga('send', 'pageview');
+    </script>
+
+    <!-- Additional Script for ScrollView Image -->
+
+    <script>
+        // JavaScript code for enabling horizontal scrolling can be added here
+        const scrollContainer = document.querySelector(".scroll-container");
+        let isScrolling = false;
+
+        scrollContainer.addEventListener("mousedown", (e) => {
+            isScrolling = true;
+            let startX = e.pageX - scrollContainer.offsetLeft;
+            let scrollLeft = scrollContainer.scrollLeft;
+
+            scrollContainer.addEventListener("mousemove", (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollContainer.offsetLeft;
+                const walk = x - startX;
+                scrollContainer.scrollLeft = scrollLeft - walk;
+            });
+
+            scrollContainer.addEventListener("mouseup", () => {
+                isScrolling = false;
+            });
+
+            scrollContainer.addEventListener("mouseleave", () => {
+                isScrolling = false;
+            });
+        });
     </script>
     </body>
 </html>
